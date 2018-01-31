@@ -1,0 +1,19 @@
+<html>
+<head>
+
+</head>
+<body>
+    <h1>Products:</h1>
+    <div>
+    {{if eq (len .products) 0}}
+        <ul>
+        {{range $item := products}}
+            <li>
+                $item.name + " " + $item.price
+            </li>
+        {{end}}
+        </ul>
+    {{end}}
+    </div>
+</body>
+</html>
